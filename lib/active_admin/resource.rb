@@ -61,6 +61,8 @@ module ActiveAdmin
     # Store a reference to the DSL so that we can dereference it during garbage collection.
     attr_accessor :dsl
 
+    attr_accessor :options
+
     # The string identifying a class to decorate our resource with for the view.
     # nil to not decorate.
     attr_accessor :decorator_class_name

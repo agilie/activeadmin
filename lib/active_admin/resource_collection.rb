@@ -35,7 +35,7 @@ module ActiveAdmin
       resources.detect do |r|
         r.resource_name.to_s == obj.to_s
       end || resources.detect do |r|
-        r.resource_class.to_s == obj.to_s
+        r.resource_class.to_s == obj.to_s && (r.options[:primary] != false)
       end ||
       if obj.respond_to? :base_class
         resources.detect{ |r| r.resource_class.to_s == obj.base_class.to_s }
